@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Pendaftaran</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="kotak_judul"> 
+  
+  <h2>PASKAH IMF 2024</h2>
+  
+  <div class="container">
+    <img src="usu.jpg" alt="Gambar" class="img3">
+    <img src="imf.png" alt="Gambar" class="img4">
+    <img src="paskah.png" alt="Gambar" class="img5">
+   </div>
+    
+  </div>
+  
+  <div class="line"></div>
+  
+  <div class="line"></div>
+  
+  <div class="kotak_form">
+  <form id="registrationForm" onsubmit="showThankYou()">
+    <label for="nama">Nama </label>
+    <input type="text" id="nama" name="nama" required>
+    <label for="jurusan">Jurusan</label>
+    <input type="text" id="jurusan" name="jurusan" required>
+
+    <label for="angkatan">Angkatan</label>
+    <input type="text" id="angkatan" name="angkatan" pattern="\d{4}" placeholder="Tahun Angkatan" required>
+    </div>
+    <br>
+    <div class="persetujuan">
+    <label for="persetujuan">
+  <input type="checkbox" id="persetujuan" required>
+  Saya menyetujui biaya Rp.5000/orang dan peraturan yang berlaku
+</label>
+</div>
+
+<br>
+<div class="submitbutton">
+    <label for="submitbutton">
+    <input type="submit" value="kirim" >
+    </label>
+    </div>
+  </form>
+
+
+
+  <div id="thankYou" class="window">
+    <div class="title-bar">
+      <div class="title">Terima Kasih</div>
+      <div class="buttons">
+        <button class="close-button" onclick="closeWindow()">X</button>
+      </div>
+    </div>
+    <div class="content">
+      <p>Terima kasih telah mendaftar di PASKAH IMF 2024</p>
+      <img src="stk_paskah.webp" alt="Stiker">
+<div class="wa" >
+    <p>Informasi Pembayaran <br>
+    (WA) +62 821-6712-2295 (<span>&#x1F4F1;</span>)</p>
+  </div>
+</div>
+</div>
+<div id="img2">
+    <img src="fisika.webp" alt="Stiker">
+    </div>
+  <script src="script.js"></script>
+  <div class="footer">
+    <p>Panitia Paskah Ikatan Mahasiswa Fisika <br>Universitas Sumatera Utara<br>2024 <br>Physics Lagom</p>
+  </div>
+  
+</body>
+</html>
