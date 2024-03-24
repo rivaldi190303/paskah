@@ -1,19 +1,18 @@
 <?php
-if(isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST['nama'];
     $jurusan = $_POST['jurusan'];
     $angkatan = $_POST['angkatan'];
-    
-    $to = 'panggabeanrivaldy@gmail.com'; // Ganti dengan alamat email developer
-    $subject = 'Pesan dari Formulir Website';
-    $message = 'Nama: ' . $nama . "\r\n" .
-               'Jurusan: ' . $jurusan . "\r\n" .
-               'Angkatan: ' . $angkatan;
-    
+    // Email pengembang
+    $email_pengembang = 'panggabeanrivaldy@gmail.com';
+
+    // Subjek dan isi email
+    $subjek = 'Data dari Formulir';
+    $pesan = "Nama: $nama\nJurusan: $jurusan\nAngkatan: $angkatan";
+
     // Kirim email
-    mail($to, $subject, $message);
+    $status = mail($email_pengembang, $subjek, $pesan);
     
-    // Redirect kembali ke halaman awal atau halaman "terima kasih"
-    header('Location: form.html');
+ 
 }
 ?>
