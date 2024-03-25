@@ -60,3 +60,11 @@ function closeWindow() {
 }
 // Add event listener to form submission
 document.getElementById('registrationForm').addEventListener('submit', submitForm);
+document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        showTransaksiButton(); // Call function to show "Lakukan Transaksi" button
+    });
+
+    function showTransaksiButton() {
+        document.getElementById("transaksiButton").classList.remove("hidden"); // Remove 'hidden' class
+    }
