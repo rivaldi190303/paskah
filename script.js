@@ -2,7 +2,7 @@
 function submitForm(event) {
     event.preventDefault();
     
-    // Get form data
+    
     var formData = {
       nama: document.getElementById('nama').value,
       angkatan: document.getElementById('angkatan').value,
