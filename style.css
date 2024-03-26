@@ -9,7 +9,7 @@ body {
 .kotak_judul {
   border: 1px solid #000;
   padding: 20px;
-  width: 80%; /* Lebar kotak relatif untuk perangkat mobile */
+  width: 80%;
   max-width: 400px; /* Maksimum lebar kotak untuk PC */
   margin: 0 auto; /* Mengatur agar kotak berada di tengah halaman */
   border-radius: 10px; /* Menghapus sudut kotak */
