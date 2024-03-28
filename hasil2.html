@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hasil</title>
+</head>
+<body>
+  <h2>Hasil Input</h2>
+  <div id="hasilData"></div>
+
+  <script>
+    // Mengambil data dari localStorage
+    var data = JSON.parse(localStorage.getItem('data'));
+
+    // Menampilkan data di laman hasil.html
+    if (data && data.length > 0) {
+      var hasilData = document.getElementById('hasilData');
+      for (var i = 0; i < data.length; i++) {
+        var dataItem = data[i];
+        hasilData.innerHTML += `
+          <p><strong>Nama:</strong> ${dataItem.nama}</p>
+          <p><strong>jurusan:</strong> ${dataItem.jurusan}</p>
+          <p><strong>angkatan:</strong> ${dataItem.angkatan}</p>
+          <hr>
+        `;
+      }
+    } else {
+      document.getElementById('hasilData').innerText = 'Tidak ada data yang tersimpan.';
+    }
+  </script>
+</body>
+</html>
