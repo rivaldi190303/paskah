@@ -1,20 +1,35 @@
 // Function to handle form submission
-function submitForm(event) {
-    event.preventDefault();
-    
-    
-    var formData = {
-      nama: document.getElementById('nama').value,
-      angkatan: document.getElementById('angkatan').value,
-      jurusan: document.getElementById('jurusan').value
-    };
+    function submitForm() {
+      // Mengambil nilai input dari formulir
+      var nama = document.getElementById('nama').value;
+      var jurusan = document.getElementById('jurusan').value;
+      var angkatan = document.getElementById('angkatan').value;
+
+      // Membuat objek data
+      var data = {
+        nama: nama,
+        jurusan: jurusan,
+        angkatan: angkatan
+      };
+
+      // Mengambil data yang sudah ada atau membuat array baru
+      var existingData = JSON.parse(localStorage.getItem('data')) || [];
+
+      // Menambahkan data baru ke array
+      existingData.push(data);
+
+      // Menyimpan array data kembali ke localStorage
+      localStorage.setItem('data', JSON.stringify(existingData));
+
+      alert('Data berhasil disimpan!');
+    }
+      
+    ;
 
   // You can perform further actions with the form data here,
   // such as sending it to a server using AJAX or processing it locally
 
   // For this example, let's just log the form data to the console
-  console.log(formData);
-}
 
 // Function to display thank you message
 function showThankYou() {
@@ -60,11 +75,3 @@ function closeWindow() {
 }
 // Add event listener to form submission
 document.getElementById('registrationForm').addEventListener('submit', submitForm);
-document.getElementById("myForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
-        showTransaksiButton(); // Call function to show "Lakukan Transaksi" button
-    });
-
-    function showTransaksiButton() {
-        document.getElementById("transaksiButton").classList.remove("hidden"); // Remove 'hidden' class
-    }
