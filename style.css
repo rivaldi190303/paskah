@@ -10,17 +10,17 @@ body {
   border: 1px solid #000;
   padding: 20px;
   width: 80%;
-  max-width: 400px; /* Maksimum lebar kotak untuk PC */
-  margin: 0 auto; /* Mengatur agar kotak berada di tengah halaman */
-  border-radius: 10px; /* Menghapus sudut kotak */
-  background-color: #a6a6a6; /* Latar putih */
-  box-shadow: 0 0 10px 5px white ;/* Bayangan */
+  max-width: 400px; 
+  margin: 0 auto; 
+  border-radius: 10px; 
+  background-color: #a6a6a6; 
+  box-shadow: 0 0 10px 5px white ;
 }
 .kotak_form{
     border: 1px solid #000;
   padding: 20px;
-  width: 80%; /* Lebar kotak relatif untuk perangkat mobile */
-  max-width: 400px; /* Maksimum lebar kotak untuk PC */
+  width: 80%; 
+  max-width: 400px; 
   margin: 0 auto; /* Mengatur agar kotak berada di tengah halaman */
   border-radius: 10px; /* Menghapus sudut kotak */
   background-color: #a6a6a6 ; /* Latar putih */
