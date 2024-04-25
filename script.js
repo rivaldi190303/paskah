@@ -4,23 +4,17 @@
       var nama = document.getElementById('nama').value;
       var jurusan = document.getElementById('jurusan').value;
       var angkatan = document.getElementById('angkatan').value;
-
       // Membuat objek data
       var data = {
         nama: nama,
         jurusan: jurusan,
         angkatan: angkatan
       };
-
       // Mengambil data yang sudah ada atau membuat array baru
       var existingData = JSON.parse(localStorage.getItem('data')) || [];
-
       // Menambahkan data baru ke array
       existingData.push(data);
-
-     
       localStorage.setItem('data', JSON.stringify(existingData));
-
       alert('Data berhasil disimpan!');
     }
       
@@ -54,11 +48,9 @@ var waDiv = document.getElementById("wa");
     // Sembunyikan submit button
     var submitButtonDiv = document.getElementById("submitbutton");
     submitButtonDiv.style.display = "none";
-  }
-  
+  } 
 document.getElementById("persetujuan").style.display= "none"; document.getElementById('thankYou').style.display = 'block';
 }
-
 function closeWindow() {
   // Close window
   window.close();
