@@ -17,7 +17,6 @@
       localStorage.setItem('data', JSON.stringify(existingData));
       alert('Data berhasil disimpan!');
     }
-      
     ;
 
 
