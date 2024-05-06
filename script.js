@@ -18,8 +18,6 @@
       alert('Data berhasil disimpan!');
     }
     ;
-
-
 function showThankYou() {
   // Prevent form submission
   event.preventDefault();
@@ -43,7 +41,6 @@ var waDiv = document.getElementById("wa");
     formDiv.style.display = "none";
     var img2Div = document.getElementById("img2");
     img2Div.style.display = "none";
-
     // Sembunyikan submit button
     var submitButtonDiv = document.getElementById("submitbutton");
     submitButtonDiv.style.display = "none";
