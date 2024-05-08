@@ -31,7 +31,7 @@ function showThankYou() {
       alert("Anda harus menyetujui persyaratan pendaftaran.");
       return false;
     }
-  }
+}
 function showThankYou() {
     var thankYouDiv = document.getElementById("thankYou");
     thankYouDiv.style.display = "block";
